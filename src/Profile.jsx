@@ -1,20 +1,9 @@
-import "./Profile.css";
-
-function Profile() {
-  const name = "Katherine Johnson";
-  const field = "Mathematician";
-
+export default function Profile({ name, image, profession }) {
   return (
-    <div>
-      <img
-        className="profile-img"
-        src="https://i.imgur.com/MK3eW3Am.jpg"
-        alt={name}
-      />
+    <div className="profile-card">
+      <img src={image} alt={name} className="profile-img" />
       <h2>{name}</h2>
-      <p>{field}</p>
+      <p>{profession}</p>
     </div>
   );
 }
-
-export default Profile;
